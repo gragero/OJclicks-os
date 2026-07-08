@@ -9,9 +9,6 @@ static size_t cursor_col;
 static uint8_t current_color;
 static uint16_t* const vga_buffer = VGA_MEMORY;
 
-/* بندمج الحرف مع اللون في قيمة 16-bit واحدة
- * زي ما اتفقنا في الـ bootloader: بايت الحرف + بايت اللون
- */
 static inline uint16_t vga_entry(char c, uint8_t color) {
     return (uint16_t)c | ((uint16_t)color << 8);
 }
