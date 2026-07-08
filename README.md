@@ -1,43 +1,44 @@
 # OJclicks OS
 
-Look, this is a 32-bit x86 operating system and kernel written from scratch in C and Assembly. It doesn't have a bloated web browser, it doesn't have a fancy GUI, and it certainly doesn't care about your feelings. It's just raw code talking directly to the hardware, the way programming was meant to be before people got lazy.
+Look, this is a 32-bit x86 operating system and kernel written from scratch in C and Assembly. The system has a future vision that it might be rewritten all over again from scratch using a programming language of my own invention too... For now, at least, the system remains strictly text-based. So, your experience here will be pretty much like someone looking for water in a desert.
 
-If you don't understand how a GDT, an IDT, or Paging works, go read a textbook before you break my code.
+The whole concept of the system, in short: fighting user surveillance and data interference under the pretext of "improving the user experience." This is a system I designed from the ground up specifically for this goal—no spying on anyone, no selling their data, and none of that nonsense. And, of course, to accelerate and optimize performance even on dead hardware... pre-Windows era.
 
-## Features
+If you don't understand how GDT, IDT, or Paging works, I advise you to go read the Linux source code... that is, if you actually want to help with the development.
 
-* Custom 32-bit Kernel entry (because GRUB is too mainstream and bloated)
-* GDT, IDT, and Paging initialized from scratch (if you still use standard BIOS interrupts, please leave)
-* Programmable Interrupt Controller (PIC) and a Keyboard driver that actually works
-* ATA Hard Disk drive driver and a basic File System (don't expect ext4 yet, write it yourself if you're so smart)
-* Physical Memory Manager (PMM) and Virtual Memory Heap (managing memory properly, unlike modern web apps)
-* Initial Usermode architecture and basic System Calls
-* Custom C Shell (ojcsh) for testing this whole thing without losing your mind
+## Current Features
+
+* Custom 32-bit Kernel entry (because GRUB is bloated, mainstream, and everyone uses it).
+* GDT, IDT, and Paging initialized from scratch (if you still rely on standard BIOS interrupts... go download Windows 11).
+* Programmable Interrupt Controller (PIC) and a keyboard driver that actually works.
+* ATA Hard Disk drive driver and a basic file system (don't expect ext4 right now...).
+* Physical Memory Manager (PMM) and Virtual Memory Heap for proper memory isolation and management.
+* Initial Usermode architecture and basic System Calls (Syscalls).
+* A custom C Shell (ojcsh) to test all this chaos without losing your mind.
 
 ## Building and Running
 
-If you are on a broken operating system, go install Arch Linux first. You will need `nasm`, `gcc` (configured for i686-elf targets, don't use your host compiler like an amateur), and `make`.
+If you are working on a broken, bloated operating system, throw it away and go install Linux (any lightweight distro at least) first. You will need these tools: `nasm`, `gcc` (configured for i686-elf targets, don't use your host compiler like an amateur), and `make`.
 
 To compile the kernel and build the disk image, run:
 
 ```bash
 make clean
 make
+
 ```
 
-If it throws compilation errors, it's 99% your environment's fault, not my code. Fix your toolchain.
+If translation or compilation errors pop up, it's 99% your environment's fault and your Toolchain, not my code. Fix your tools.
 
-To test the generated disk.img using QEMU:
-
+To test the generated `disk.img` using QEMU:
 
 ```bash
-cat build/boot.bin build/kernel.bin > disk.img &&
- truncate -s 1474560 disk.img
-
+cat build/boot.bin build/kernel.bin > disk.img && truncate -s 1474560 disk.img
 qemu-system-i386 -hda disk.img
+
 ```
 
-If it crashes your machine, congratulations, you just learned how low-level development works.
+If this command crashes your machine, congratulations, you just learned what low-level systems programming actually means.
 
 # .
 # عربي
