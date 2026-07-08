@@ -1,0 +1,9 @@
+megs: 32
+romimage: file=/usr/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/usr/share/bochs/VGABIOS-lgpl-latest.bin
+floppya: 1_44=build/os-image.bin, status=inserted
+boot: floppy
+log: bochsout.txt
+mouse: enabled=0
+display_library: x, options="gui_debug"
+clock: sync=realtime, time0=local
