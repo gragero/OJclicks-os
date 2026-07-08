@@ -38,7 +38,7 @@ qemu-system-i386 -hda disk.img
 
 If it crashes your machine, congratulations, you just learned how low-level development works.
 
-#عربي
+# عربي
 
 # OJclicks OS
 
