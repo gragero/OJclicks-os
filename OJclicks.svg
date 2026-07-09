@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180">
+
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <circle
+      cx="95"
+      cy="90"
+      r="48"
+      fill="none"
+      stroke="url(#g)"
+      stroke-width="10"/>
+
+  <ellipse
+      cx="95"
+      cy="90"
+      rx="65"
+      ry="24"
+      fill="none"
+      stroke="#38bdf8"
+      stroke-width="5"
+      opacity=".5">
+
+      <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 95 90"
+          to="360 95 90"
+          dur="8s"
+          repeatCount="indefinite"/>
+  </ellipse>
+
+  <path
+      d="M210 45
+         V120
+         C210 155 185 165 160 165"
+      fill="none"
+      stroke="url(#g)"
+      stroke-width="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+
+  <circle r="6" fill="#ffffff">
+      <animateMotion
+          dur="8s"
+          repeatCount="indefinite"
+          path="M95 42
+                A48 48 0 1 1 94.9 42"/>
+  </circle>
+
+</svg>
