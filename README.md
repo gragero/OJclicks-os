@@ -1,5 +1,5 @@
 # OJclicks OS
-![OJ Logo](image.png)
+
 Look, this is a 32-bit x86 operating system and kernel written from scratch in C and Assembly. The system has a future vision that it might be rewritten all over again from scratch using a programming language of my own invention too... For now, at least, the system remains strictly text-based. So, your experience here will be pretty much like someone looking for water in a desert.
 
 The whole concept of the system, in short: fighting user surveillance and data interference under the pretext of "improving the user experience." This is a system I designed from the ground up specifically for this goal—no spying on anyone, no selling their data, and none of that nonsense. And, of course, to accelerate and optimize performance even on dead hardware... pre-Windows era.
