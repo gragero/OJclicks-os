@@ -30,7 +30,7 @@
           type="rotate"
           from="0 95 90"
           to="360 95 90"
-          dur="8s"
+          dur="1s"
           repeatCount="indefinite"/>
   </ellipse>
 
@@ -44,7 +44,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"/>
 
-  <circle r="6" fill="#ffffff">
+  <circle r="6" fill="#00ff00">
       <animateMotion
           dur="8s"
           repeatCount="indefinite"
