@@ -33,8 +33,11 @@ If translation or compilation errors pop up, it's 99% your environment's fault a
 To test the generated `disk.img` using QEMU:
 
 ```bash
+dd if=/dev/zero of=hdd.img bs=1M count=10
+
 cat build/boot.bin build/kernel.bin > disk.img && truncate -s 1474560 disk.img
-qemu-system-i386 -hda disk.img
+
+qemu-system-i386 -fda disk.img -hda hdd.img 
 
 ```
 
@@ -75,10 +78,11 @@ make
 
 لاختبار ملف disk.img الناتج باستخدام QEMU:
 ```bash
-cat build/boot.bin build/kernel.bin > disk.img &&
- truncate -s 1474560 disk.img
+dd if=/dev/zero of=hdd.img bs=1M count=10
 
-qemu-system-i386 -hda disk.img
+cat build/boot.bin build/kernel.bin > disk.img && truncate -s 1474560 disk.img
+
+qemu-system-i386 -fda disk.img -hda hdd.img 
 ```
 لو الأمر ده عمل كراش لجهازك، مبروك، أنت لسه متعلم حالا يعني إيه برمجة الأنظمة منخفضة المستوى.
 
