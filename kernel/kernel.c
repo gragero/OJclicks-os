@@ -157,7 +157,7 @@ static void cmd_oj_off(void) {
 }
 
 static void cmd_uname(void) {
-    vga_puts("OJclicks OS v0.7.5\n");
+    vga_puts("OJclicks OS v0.8\n");
     vga_puts("Kernel: Custom x86 Protected Mode\n");
     vga_puts("Compiler: GCC cross-compiler\n");
     vga_puts("Architecture: i386\n");
