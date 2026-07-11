@@ -5,6 +5,6 @@ build/
 *.elf
 *.img
 *.iso
-iso_root/boot/kernel.bin
+iso_root/
 bochsout.txt
 snapshot.txt
