@@ -1,3 +1,10 @@
+
 build/
+*.o
+*.bin
+*.elf
 *.img
-*.txt
+*.iso
+iso_root/boot/kernel.bin
+bochsout.txt
+snapshot.txt
