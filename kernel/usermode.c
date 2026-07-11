@@ -11,8 +11,11 @@ static uint32_t saved_ebp;
 extern void usermode_enter_asm(uint32_t entry, uint32_t user_stack, uint32_t* saved_esp, uint32_t* saved_ebp);
 extern void usermode_return_asm(uint32_t saved_esp, uint32_t saved_ebp);
 
+#define KERNEL_INT_STACK_SIZE 4096
+static uint8_t kernel_int_stack[KERNEL_INT_STACK_SIZE];
+
 void usermode_run(void (*entry)(void)) {
-    tss_set_kernel_stack(0x90000);
+    tss_set_kernel_stack((uint32_t)(kernel_int_stack + KERNEL_INT_STACK_SIZE));
 
     uint32_t esp_top = (uint32_t)(user_stack + USER_STACK_SIZE);
     usermode_enter_asm((uint32_t)entry, esp_top, &saved_esp, &saved_ebp);

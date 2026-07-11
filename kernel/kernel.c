@@ -24,7 +24,7 @@ extern uint32_t bss_end;
 static void print_banner(void) {
     vga_set_color(VGA_LIGHT_CYAN, VGA_BLACK);
     vga_puts("=========================================\n");
-    vga_puts("   OJclicks OS - Kernel v0.7.5 (C Edition)\n");
+    vga_puts("   OJclicks OS - Kernel v0.8 (C Edition)\n");
     vga_puts("=========================================\n");
     vga_set_color(VGA_LIGHT_GREY, VGA_BLACK);
     vga_puts("Type 'help' for a list of commands.\n\n");
@@ -70,7 +70,7 @@ static void cmd_help(void) {
 }
 
 static void cmd_about(void) {
-    vga_puts("OJclicks OS v0.7\n");
+    vga_puts("OJclicks OS v0.8\n");
     vga_puts("Built from scratch in Assembly + C\n");
     vga_puts("Boot: BIOS -> Real Mode -> A20 -> GDT -> Protected Mode -> C Kernel\n");
     vga_puts("Features: GDT, IDT, ISR, PIC, Timer, PMM, Paging, Heap, VGA, Keyboard\n");
