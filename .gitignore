@@ -5,6 +5,6 @@ build/
 *.elf
 *.img
 *.iso
-iso_root/
+iso/
 bochsout.txt
 snapshot.txt

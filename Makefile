@@ -129,6 +129,11 @@ $(BUILD)/hello.elf: user/hello.c user/link_user.ld
 embed_hello: $(BUILD)/hello.elf
 	dd if=$(BUILD)/hello.elf of=hdd.img bs=512 seek=500 conv=notrunc
 
+iso: all
+	mkdir -p iso
+	cp $(BUILD)/os-image.bin iso/
+	xorrisofs -o ojclicks-os.iso -b os-image.bin -iso-level 3 iso/
+
 run: all embed_hello
 	bochs -f .bochsrc -q
 
